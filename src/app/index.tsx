@@ -2,6 +2,6 @@
 
 export const App = () => {
 	return (
-		<div>1</div>
+		<div>2</div>
 	)
 }
