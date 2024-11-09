@@ -1,7 +1,7 @@
 import { Link } from "~/shared/ui/link"
 import { EventFrame } from "../event"
 import { NoticeFrame } from "../notice"
-
+import { CSSTransition, TransitionGroup } from "react-transition-group"
 
 export const Header = () => {
 	return (
