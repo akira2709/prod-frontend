@@ -1,6 +1,6 @@
 import { Link } from "~/shared/ui/link"
 import { EventFrame } from "../event"
-import { TransitionGroup, CSSTransition } from "react-transition-group"
+
 
 
 export const Header = () => {
