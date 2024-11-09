@@ -1,9 +1,12 @@
 import { Link } from "~/shared/ui/link"
 import { EventFrame } from "../event"
 import { NoticeFrame } from "../notice"
+import { useContext } from "react"
+import { LoginContext } from "~/pages/home"
 
 
 export const Header = () => {
+	const setLoginOpen = useContext(LoginContext)
 	return (
 		<header className={"w-full fixed bg-transparent h-20 flex justify-center items-center text-[white] text-xl select-none"}>
 			<div className={"w-[80%] h-[90%] bg-green border rounded-2xl flex content-center"}>
@@ -15,7 +18,7 @@ export const Header = () => {
 				<div className={"w-full h-full items-center justify-around flex"}>
 					<EventFrame></EventFrame>
 					<NoticeFrame></NoticeFrame>
-					<Link>Профиль</Link>
+					<Link onClick={() => setLoginOpen(true)}>Профиль</Link>
 				</div>
 			</div>
 		</header>

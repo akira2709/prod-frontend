@@ -19,6 +19,9 @@ export default {
 			},
 			"green": {
 				DEFAULT: "#084025"
+			},
+			"blue": {
+				DEFAULT: "#4e84c1"
 			}
 		}
   },

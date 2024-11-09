@@ -1,6 +1,9 @@
-
+import { useContext } from "react"
+import { LoginContext } from "~/pages/home"
 
 export const Content = () => {
+	const setLoginOpen = useContext(LoginContext)
+
 	return (
 		<main className={"w-[80vw] h-full ml-[10vw] pt-20"}>
 			<div className={"mt-8 w-full"}>
@@ -19,7 +22,7 @@ export const Content = () => {
 					<p>в поездках, в группах, с друзьями и семьёй.</p>
 				</div>
 			</div>
-			<button className={"w-[200px] h-12 bg-[#4e84c1] mt-4 text-[white] hover:scale-95 transition-all duration-300"}>Регистрация</button>
+			<button className={"w-[200px] h-12 bg-blue mt-4 text-[white] hover:scale-95 transition-all duration-300"} onClick={() => setLoginOpen(true)}>Регистрация</button>
 			<div className={"mt-8"}>
 				<img src="prod-frontend/src/assets/some-image.jpg" alt="" />
 			</div>
