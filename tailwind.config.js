@@ -17,6 +17,9 @@ export default {
 				DEFAULT: "#1c1e25",
 				"light": "#323542"
 			},
+			"green": {
+				DEFAULT: "#084025"
+			}
 		}
   },
   plugins: [],
