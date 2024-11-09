@@ -1,9 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import { lazy } from "react";
 import Home from "~/pages/home";
+import Profile from "~/pages/profile";
 import { MainLayout } from "~/shared/ui";
-
-const Profile = lazy(() => import("~/pages/profile"))
 
 const routes = [
 	{

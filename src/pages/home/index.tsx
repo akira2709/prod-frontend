@@ -1,16 +1,23 @@
 import { Header } from "~/widgits/header"
 import { Content } from "~/widgits/content"
 import { Login } from "~/widgits/login"
-import { createContext, SetStateAction, useState, Dispatch } from "react"
+import { createContext, SetStateAction, useState, Dispatch, useContext } from "react"
+import { UserContex } from "~/app"
+import { useNavigate } from "react-router-dom"
 
 const LoginContext = createContext <Dispatch<SetStateAction<boolean>>>(() => {})
-export { LoginContext }
 
 const Home = () => {
 	const [loginOpen, setLoginOpen] = useState<boolean>(false)
+	const user = useContext(UserContex)
+	const navigate = useNavigate()
 
 	const toggleLoginOpen = () => {
-		setLoginOpen(!loginOpen)
+		if (user === null) {
+			setLoginOpen(!loginOpen)
+		} else {
+			return navigate("profile")
+		}
 	}
 
 	return (
@@ -24,3 +31,4 @@ const Home = () => {
 	)
 }
 export default Home
+export { LoginContext }

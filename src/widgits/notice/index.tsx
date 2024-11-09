@@ -16,21 +16,25 @@ const NoticeFrame = (props: Props) => {
 
 	const notices = [
 		{
+			id: 1,
 			title: "Покупка",
 			time: "15:44",
 			date: "12-02-2024"
 		},
 		{
+			id: 2,
 			title: "Такси",
 			time: "15:44",
 			date: "12-02-2024"
 		},
 		{
+			id: 3,
 			title: "Поездка в Италию",
 			time: "15:44",
 			date: "12-02-2024"
 		},
 		{
+			id: 4,
 			title: "Ресторан",
 			time: "15:44",
 			date: "12-02-2024"
@@ -44,7 +48,7 @@ const NoticeFrame = (props: Props) => {
 				<div className={"grid w-full justify-center p-4"}>
 					{notices.map((notice) => {
 						return (
-							<div className={"flex gap-2 w-80 h-[91px] justify-between"}>
+							<div className={"flex gap-2 w-80 h-[91px] justify-between"} key={notice.id}>
 								<div className={"text-sm h-10 flex justify-center"}>
 									<img src="prod-frontend/src/assets/notice.svg" alt="notice" className={"h-full aspect-square mt-4"}/>
 								</div>

@@ -3,7 +3,8 @@ import { UserType } from "./model"
 
 
 export const getUser = async () => {
-	return await httpClient.post("get_user", { json: { token: "jwt_token" } }).json<UserType>()
+	// return await httpClient.post("get_user", { json: { token: "jwt_token" } }).json<UserType>()
+	return await httpClient.get("users").json<UserType>()
 }
 
 export const updateUser = async (data: object) => {
