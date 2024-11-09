@@ -1,10 +1,9 @@
 import { Link } from "~/shared/ui/link"
 import { Frame } from "~/shared/ui/frame"
-import { ReactNode, useState } from "react"
+import { useState } from "react"
 import clsx from "clsx"
 
 interface Props {
-	children?: ReactNode
 	className?: string
 }
 
@@ -18,8 +17,17 @@ const EventFrame = (props: Props) => {
 	return (
 		<div className={clsx("w-fit relative", props.className)}>
 			<Link onClick={() => toggleOpen()}>Событие</Link>
-			<Frame className={isOpen ? "open top-10 -left-[85px]" : "close"}>
-				{ props.children }
+			<Frame isOpen={isOpen} className={"-left-[85px]"}>
+				<div className={"grid w-full justify-center p-4"}>
+					<div className={"flex gap-2"}>
+						<img src="/prod-frontend/src/assets/calendar.svg" alt="calendar" />
+						<Link className={"after:!bg-asphalt"}>Создать событие</Link>
+					</div>
+					<div className={"flex gap-2"}>
+						<img src="/prod-frontend/src/assets/calendar.svg" alt="calendar" />
+						<Link className={"after:!bg-asphalt"}>Создать ивент</Link>
+					</div>
+				</div>
 			</Frame>
 		</div>
 	)

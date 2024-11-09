@@ -4,14 +4,15 @@ import clsx from "clsx"
 
 interface Props {
 	children?: ReactNode
+	isOpen?: boolean
 	className?: string
 }
 
 const Frame = (props: Props) => {
 	return (
-		<div className={clsx("border-2 border-asphalt", props.className)}>
+		<dialog className={clsx("border-2 border-asphalt dialog", props.className)} open={props.isOpen}>
 			{ props.children }
-		</div>
+		</dialog>
 	)
 }
 export { Frame }

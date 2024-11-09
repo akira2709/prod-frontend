@@ -1,6 +1,6 @@
 import { Link } from "~/shared/ui/link"
 import { EventFrame } from "../event"
-import { TransitionGroup, CSSTransition } from "react-transition-group"
+import { NoticeFrame } from "../notice"
 
 
 export const Header = () => {
@@ -13,19 +13,8 @@ export const Header = () => {
 				</div>
 
 				<div className={"w-full h-full items-center justify-around flex"}>
-					<EventFrame>
-						<div className={"grid w-full justify-center p-4"}>
-							<div className={"flex gap-2"}>
-								<img src="/prod-frontend/src/assets/calendar.svg" alt="calendar" />
-								<Link className={"after:!bg-asphalt"}>Создать событие</Link>
-							</div>
-							<div className={"flex gap-2"}>
-								<img src="/prod-frontend/src/assets/calendar.svg" alt="calendar" />
-								<Link className={"after:!bg-asphalt"}>Создать ивент</Link>
-							</div>
-						</div>
-					</EventFrame>
-					<Link>Уведомления</Link>
+					<EventFrame></EventFrame>
+					<NoticeFrame></NoticeFrame>
 					<Link>Профиль</Link>
 				</div>
 			</div>
