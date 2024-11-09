@@ -1,8 +1,25 @@
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter } from "react-router-dom";
+import { lazy } from "react";
+import Home from "~/pages/home";
+import { MainLayout } from "~/shared/ui";
 
-export const router = createBrowserRouter([
+const Profile = lazy(() => import("~/pages/profile"))
+
+const routes = [
 	{
 		path: "/",
-		element: <></>
-	}
-])
+		element: <MainLayout />,
+		children: [
+			{
+				index: true,
+				element: <Home />
+			},
+			{
+				path: "/profile",
+				element: <Profile />
+			}
+		]
+	},
+]
+
+export const router = createBrowserRouter(routes, { basename: "/prod-frontend" })
