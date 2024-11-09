@@ -22,4 +22,4 @@ const routes = [
 	},
 ]
 
-export const router = createBrowserRouter(routes, { basename: "/prod-frontend" })
+export const router = createBrowserRouter(routes)
