@@ -7,7 +7,7 @@ const Profile = lazy(() => import("~/pages/profile"))
 
 const routes = [
 	{
-		path: "/prod-frontend",
+		path: "/",
 		element: <MainLayout />,
 		children: [
 			{
@@ -22,5 +22,4 @@ const routes = [
 	},
 ]
 
-export const router = createBrowserRouter(routes)
-// export const router = createBrowserRouter(routes, { basename: '/prod-frontend' })
+export const router = createBrowserRouter(routes, { basename: '/prod-frontend' })
