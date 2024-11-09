@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Login = (props: Props) => {
-	const [mode, setMode] = useState(true)
+	const [mode, setMode] = useState(false)
 
 	if (mode) {
 		return (
