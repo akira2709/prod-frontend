@@ -4,14 +4,20 @@ import { router } from "./routing"
 import { useQuery } from "react-query"
 import { getUser } from "~/shared/api/user"
 import { createContext } from "react"
+import { UserDataType } from "~/entities/model"
 
-const UserContext = createContext<object | null>(null)
+const UserContext = createContext<UserDataType | null>(null)
 
 const App = () => {
-	const query = useQuery({ queryKey: ["user"], queryFn: getUser })
+	const { data, isLoading, isError } = useQuery({ queryKey: ["user"], queryFn: getUser })
+	const userContextValue = {
+		data: data,
+		isLoading: isLoading,
+		isError: isError
+	}
 
 	return (
-		<UserContext.Provider value={query}>
+		<UserContext.Provider value={userContextValue}>
 			<RouterProvider router={ router } />
 		</UserContext.Provider>
 	)
