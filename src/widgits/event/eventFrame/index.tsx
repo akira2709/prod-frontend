@@ -2,6 +2,7 @@ import { Link } from "~/shared/ui/link"
 import { Frame } from "~/shared/ui/frame"
 import { useState } from "react"
 import clsx from "clsx"
+import { useNavigate } from "react-router-dom"
 
 interface Props {
 	className?: string
@@ -9,6 +10,7 @@ interface Props {
 
 const EventFrame = (props: Props) => {
 	const [isOpen, setOpen] = useState(false)
+	const navigate = useNavigate()
 
 	const toggleOpen = () => {
 		setOpen(!isOpen)
@@ -21,7 +23,7 @@ const EventFrame = (props: Props) => {
 				<div className={"grid w-full justify-center p-4"}>
 					<div className={"flex gap-2"}>
 						<img src="assets/calendar.svg" alt="calendar" />
-						<Link className={"after:!bg-asphalt"}>Создать событие</Link>
+						<Link className={"after:!bg-asphalt"} onClick={ () => navigate("/create-event") }>Создать событие</Link>
 					</div>
 					{/* <div className={"flex gap-2"}>
 						<img src="assets/calendar.svg" alt="calendar" />

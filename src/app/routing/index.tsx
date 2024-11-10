@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import { CreateEventPage } from "~/pages/createEventPage";
 import Home from "~/pages/home";
 import Profile from "~/pages/profile";
 import { MainLayout } from "~/shared/ui";
@@ -15,6 +16,10 @@ const routes = [
 			{
 				path: "/profile",
 				element: <Profile />
+			},
+			{
+				path: "/create-event",
+				element: <CreateEventPage />
 			}
 		]
 	},

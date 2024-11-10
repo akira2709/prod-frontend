@@ -1,13 +1,16 @@
 import { Link } from "~/shared/ui/link"
 import { EventFrame } from "../event"
 import { NoticeFrame } from "../notice"
-import { useContext } from "react"
-import { LoginContext } from "~/pages/home"
+import { Context, Dispatch, SetStateAction, useContext } from "react"
 import { useNavigate } from "react-router-dom"
 
+interface Props {
+	LoginContext: Context<Dispatch<SetStateAction<boolean>>>
+}
 
-export const Header = () => {
-	const setLoginOpen = useContext(LoginContext)
+
+export const Header = (props: Props) => {
+	const setLoginOpen = useContext(props.LoginContext)
 	const navigate = useNavigate()
 	return (
 		<header className={"w-full fixed bg-transparent h-20 flex justify-center items-center text-[white] text-xl select-none z-50"}>

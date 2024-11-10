@@ -12,7 +12,7 @@ const Login = (props: Props) => {
 
 	if (mode) {
 		return (
-			<dialog className={"w-[375px] h-[300px] border-2 border-[#fff] rounded-xl fixed top-40 text-xl p-4 bg-green text-[#fff]"} open={props.isOpen}>
+			<dialog className={"w-[375px] h-[300px] border-2 border-[#fff] rounded-xl fixed top-40 text-xl p-4 bg-green text-[#fff] z-50"} open={props.isOpen}>
 				<div className={"absolute hover:scale-90 transition-all duration-300 right-5 cursor-pointer"} onClick={props.setOpen}>
 					<img src="assets/cross.svg" alt="" />
 				</div>
@@ -36,7 +36,7 @@ const Login = (props: Props) => {
 		)
 	} else {
 		return (
-			<dialog className={"w-[375px] h-[300px] border-2 border-[#fff] rounded-xl fixed top-40 text-xl p-4 bg-green text-[#fff]"} open={props.isOpen}>
+			<dialog className={"w-[375px] h-[300px] border-2 border-[#fff] rounded-xl fixed top-40 text-xl p-4 bg-green text-[#fff] z-50"} open={props.isOpen}>
 				<div className={"absolute hover:scale-90 transition-all duration-300 right-5 cursor-pointer"} onClick={props.setOpen}>
 					<img src="assets/cross.svg" alt="" />
 				</div>
