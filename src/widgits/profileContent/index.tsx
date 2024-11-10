@@ -13,21 +13,21 @@ export const ProfileContent = () => {
 					<p className={"text-xl"}>Измените свой аватар</p>
 					<button className={"bg-blue w-52 h-12 text-md border rounded-lg text-[#fff] hover:scale-95 transition-all duration-300"}>Выберите файл</button>
 				</div>
-				<div className={"h-96 w-full"}>
-					<div>
-						<div className={"flex px-32 pt-10 text-2xl"}>
+				<div className={"h-96 w-full flex items-center"}>
+					<div className={"h-full grid align-middle"}>
+						<div className={"flex px-32 text-2xl min-h-1/3 items-center"}>
 							<div>
 								<p>Ваше имя</p>
 								<UserData param={"id"} />
 							</div>
 						</div>
-						<div className={"flex px-32 pt-10 text-2xl"}>
+						<div className={"flex px-32 text-2xl min-h-1/3 items-center"}>
 							<div>
 								<p>Ваш номер телефона</p>
 								<UserData param={"phonenumber"}/>
 							</div>
 						</div>
-						<div className={"flex px-32 pt-10 text-2xl"}>
+						<div className={"flex px-32 text-2xl min-h-1/3 items-center"}>
 							<div>
 								<p>Ваш номер карты</p>
 								<UserData param={"card"}/>
