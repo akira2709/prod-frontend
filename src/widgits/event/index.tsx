@@ -20,11 +20,11 @@ const EventFrame = (props: Props) => {
 			<Frame isOpen={isOpen} className={"-left-[85px]"}>
 				<div className={"grid w-full justify-center p-4"}>
 					<div className={"flex gap-2"}>
-						<img src="/prod-frontend/src/assets/calendar.svg" alt="calendar" />
+						<img src="assets/calendar.svg" alt="calendar" />
 						<Link className={"after:!bg-asphalt"}>Создать событие</Link>
 					</div>
 					<div className={"flex gap-2"}>
-						<img src="/prod-frontend/src/assets/calendar.svg" alt="calendar" />
+						<img src="assets/calendar.svg" alt="calendar" />
 						<Link className={"after:!bg-asphalt"}>Создать ивент</Link>
 					</div>
 				</div>

@@ -50,7 +50,7 @@ const NoticeFrame = (props: Props) => {
 						return (
 							<div className={"flex gap-2 w-80 h-[91px] justify-between"} key={notice.id}>
 								<div className={"text-sm h-10 flex justify-center"}>
-									<img src="prod-frontend/src/assets/notice.svg" alt="notice" className={"h-full aspect-square mt-4"}/>
+									<img src="assets/notice.svg" alt="notice" className={"h-full aspect-square mt-4"}/>
 								</div>
 								<div className={"content-center text-sm mb-4"}>
 									{ notice.title }

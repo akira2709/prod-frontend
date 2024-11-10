@@ -5,16 +5,16 @@ import { useQuery } from "react-query"
 import { getUser } from "~/shared/api/user"
 import { createContext } from "react"
 
-const UserContex = createContext<object | null>(null)
+const UserContext = createContext<object | null>(null)
 
 const App = () => {
 	const query = useQuery({ queryKey: ["user"], queryFn: getUser })
 
 	return (
-		<UserContex.Provider value={query}>
+		<UserContext.Provider value={query}>
 			<RouterProvider router={ router } />
-		</UserContex.Provider>
+		</UserContext.Provider>
 	)
 }
 export default App
-export { UserContex }
+export { UserContext }

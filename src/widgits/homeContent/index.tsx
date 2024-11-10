@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { LoginContext } from "~/pages/home"
 
-export const Content = () => {
+export const HomeContent = () => {
 	const setLoginOpen = useContext(LoginContext)
 
 	return (
@@ -14,7 +14,7 @@ export const Content = () => {
 						<p className={"text-md"}>расходов с командой</p>
 					</div>
 					<div>
-						<img src="prod-frontend/src/assets/phone.svg" alt="" />
+						<img src="assets/phone.svg" alt="" />
 					</div>
 				</div>
 				<div className={"mt-4"}>
@@ -22,9 +22,9 @@ export const Content = () => {
 					<p>в поездках, в группах, с друзьями и семьёй.</p>
 				</div>
 			</div>
-			<button className={"w-[200px] h-12 bg-blue mt-4 text-[white] hover:scale-95 transition-all duration-300"} onClick={() => setLoginOpen(true)}>Регистрация</button>
+			<button className={"w-[200px] h-12 bg-blue mt-4 text-[white] hover:scale-95 transition-all duration-300 rounded-lg"} onClick={() => setLoginOpen(true)}>Регистрация</button>
 			<div className={"mt-8"}>
-				<img src="prod-frontend/src/assets/some-image.jpg" alt="" />
+				<img src="assets/some-image.jpg" alt="" />
 			</div>
 		</main>
 	)
