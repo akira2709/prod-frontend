@@ -1,7 +1,7 @@
 import { UserContext } from "~/app"
 import { useContext } from "react"
-import "./index.css"
 import clsx from "clsx"
+import { Loader } from "~/shared/ui/loader"
 
 interface Props {
 	className?: string
@@ -20,7 +20,7 @@ export const UserData = (props: Props) => {
 
 	if (user) {
 		if (user.isLoading) {
-			return <div className={"loader"}></div>
+			return <Loader />
 		} else {
 			if (user.data) {
 				return <p className={clsx(props.className, "mt-2")}>{ content() }</p>

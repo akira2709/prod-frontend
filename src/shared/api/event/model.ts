@@ -1,4 +1,7 @@
 export type EventType = {
-	eventId: number,
-	users: number[],
+	eventId: number
+	eventName: string
+	username: string
+	eventDate: string
+	eventBalance: number
 }

@@ -18,10 +18,14 @@ export default {
 				"light": "#323542"
 			},
 			"green": {
-				DEFAULT: "#084025"
+				DEFAULT: "#084025",
+				"light": "#00ab36"
 			},
 			"blue": {
 				DEFAULT: "#4e84c1"
+			},
+			"red": {
+				DEFAULT: "#db0004"
 			}
 		}
   },

@@ -4,7 +4,7 @@ import { router } from "./routing"
 import { useQuery } from "react-query"
 import { getUser } from "~/shared/api/user"
 import { createContext } from "react"
-import { UserDataType } from "~/entities/model"
+import { UserDataType } from "~/entities/user/model"
 
 const UserContext = createContext<UserDataType | null>(null)
 

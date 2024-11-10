@@ -17,16 +17,16 @@ const EventFrame = (props: Props) => {
 	return (
 		<div className={clsx("w-fit relative", props.className)}>
 			<Link onClick={() => toggleOpen()}>Событие</Link>
-			<Frame isOpen={isOpen} className={"-left-[85px]"}>
+			<Frame isOpen={isOpen} className={"-left-[85px] !h-fit"}>
 				<div className={"grid w-full justify-center p-4"}>
 					<div className={"flex gap-2"}>
 						<img src="assets/calendar.svg" alt="calendar" />
 						<Link className={"after:!bg-asphalt"}>Создать событие</Link>
 					</div>
-					<div className={"flex gap-2"}>
+					{/* <div className={"flex gap-2"}>
 						<img src="assets/calendar.svg" alt="calendar" />
 						<Link className={"after:!bg-asphalt"}>Создать ивент</Link>
-					</div>
+					</div> */}
 				</div>
 			</Frame>
 		</div>

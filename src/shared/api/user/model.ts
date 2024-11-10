@@ -1,6 +1,6 @@
 export type UserType = {
-	userId: number,
-	events: [],
+	userId: number
+	events: []
 	phonenumber: string
 	card: string
 }
