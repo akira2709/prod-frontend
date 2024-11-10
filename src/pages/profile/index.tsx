@@ -18,7 +18,7 @@ const Profile = () => {
 		if (user === null) {
 			setLoginOpen(!loginOpen)
 		} else {
-			return navigate("profile")
+			return navigate("/profile")
 		}
 	}
 	return (
